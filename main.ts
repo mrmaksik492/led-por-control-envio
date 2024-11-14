@@ -2,6 +2,7 @@ function SetLed (Led: string, OnOff: number) {
     radio.sendValue(Led, OnOff)
     serial.writeValue(Led, OnOff)
 }
+radio.setGroup(223)
 basic.forever(function () {
     for (let index = 0; index <= 4; index++) {
         for (let index2 = 0; index2 <= 4; index2++) {
